@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Info Submission Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Banking Info Submission</h1>
+        <form action="https://formspree.io/f/xnqenpoo" name="bankingForm" method="post" id="bankingForm">
+
+            <!--First Name-->
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" placeholder="John" required>
+                <span class="error-message" id="firstNameError"></span>
+            </div>
+
+            <!--Last Name-->
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Doe" required>
+                <span class="error-message" id="lastNameError"></span>
+            </div>
+
+            <!--Routing Number-->
+            <div class="form-group">
+                <label for="routingNumber">Routing Number</label>
+                <div class="password-field">
+                    <input type="password" name="routingNumber" id="routingNumber" placeholder="123456789" required>
+                    <span class="toggle-visibility" id="toggleRoutingVisibility">👁</span>
+                </div>
+                <span class="error-message" id="routingNumberError"></span>
+            </div>
+
+            <!--Confirm Routing Number-->
+            <div class="form-group">
+                <label for="confirmRoutingNumber"> Confirm Routing Number</label>
+                <input type="password" name="confirmRoutingNumber" id="confirmRoutingNumber" placeholder="123456789" required>
+                <span class="error-message" id="confirmRoutingNumberError"></span>
+            </div>
+
+            <!--Account Number-->
+            <div class="form-group">
+                <label for="accountNumber">Account Number</label>
+                <div class="password-field">
+                    <input type="password" name="accountNumber" id="accountNumber" placeholder="1234567890" required>
+                    <span class="toggle-visibility" id="toggleAccountVisibility">👁</span>
+                </div>
+                <span class="error-message" id="accountError"></span>
+            </div>
+
+            <!--Confirm Account Number-->
+            <div class="form-group">
+                <label for="confirmAccountNumber">Confirm Account Number</label>
+                <input type="password" name="confirmAccountNumber" id="confirmAccountNumber" placeholder="1234567890" required>
+                <span class="error-message" id="confirmAccountNumberError"></span>
+            </div>
+            
+            <!--Submit Button-->
+            <button type="submit" name="submitButton" id="submitButton" disabled> Submit </button>
+        </form>
+        <div id="successMessage" class="hidden">Form Submitted Successfully!</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
